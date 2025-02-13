@@ -1,40 +1,13 @@
-# Welcome to Remix!
+## Welcome to Taskly!
 
-- 📖 [Remix docs](https://remix.run/docs)
+**Taskly** is a personal __task management__ and __time-tracking application__ designed to help individuals stay organized, track their activities, and prioritize tasks for personal growth. With a focus on productivity and self-improvement, it provides intuitive tools to manage daily tasks efficiently. The application is currently a work in progress, with exciting features in development. Future plans include expanding to support teams and collaborative task management.
 
-## Development
+## Tech-Stack
+1. RemixJS 
+2. ReactJS
+3. Database (TBD)
+4. ShadCN UI
+5. TailwindCSS
 
-Run the dev server:
-
-```shellscript
-npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## Application Tasks!
+This can be viewed in the TODO markdown file 
