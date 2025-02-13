@@ -13,7 +13,7 @@ import {
 } from "~/components/ui/sidebar"
 
 import { ScrollArea } from "~/components/ui/scroll-area"
-import { SidebarItems } from "~/shared/SidebarContent"
+import { SidebarItemsGroup1,SidebarItemsGroup2 } from "~/shared/SidebarContent"
 import { Link } from "@remix-run/react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { ChevronUp, User2 } from "lucide-react";
@@ -77,57 +77,40 @@ function SideBarFooter() {
 function SideBarGroup() {
   return (
     <>
-    <SidebarGroup>
-      <SidebarGroupLabel className="text-md text-black">Application</SidebarGroupLabel>
-      <SidebarGroupContent>
-        <SidebarMenu>
-          {SidebarItems.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <Link to={item.url}>
-                  <item.icon />
-                  <span>{item.title}</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
-      </SidebarGroupContent>
-    </SidebarGroup>
-    <SidebarGroup>
-    <SidebarGroupLabel className="text-md text-black">Application</SidebarGroupLabel>
-    <SidebarGroupContent>
-      <SidebarMenu>
-        {SidebarItems.map((item) => (
-          <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton asChild>
-              <Link to={item.url}>
-                <item.icon />
-                <span>{item.title}</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
-      </SidebarMenu>
-    </SidebarGroupContent>
-  </SidebarGroup>
-  <SidebarGroup>
-  <SidebarGroupLabel className="text-md text-black">Application</SidebarGroupLabel>
-  <SidebarGroupContent>
-    <SidebarMenu>
-      {SidebarItems.map((item) => (
-        <SidebarMenuItem key={item.title}>
-          <SidebarMenuButton asChild>
-            <Link to={item.url}>
-              <item.icon />
-              <span>{item.title}</span>
-            </Link>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
-      ))}
-    </SidebarMenu>
-  </SidebarGroupContent>
-</SidebarGroup>
-</>
+      <SidebarGroup>
+        <SidebarGroupLabel className="text-sm text-zinc-900">Main Application</SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            {SidebarItemsGroup1.map((item) => (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild>
+                  <Link to={item.url}>
+                    <item.icon />
+                    <span>{item.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
+      <SidebarGroup className="mt-2">
+        <SidebarGroupLabel className="text-sm text-zinc-900">Help & Support</SidebarGroupLabel>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            {SidebarItemsGroup2.map((item) => (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild>
+                  <Link to={item.url}>
+                    <item.icon />
+                    <span>{item.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
+    </>
   )
 }

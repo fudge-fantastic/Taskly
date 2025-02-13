@@ -1,6 +1,6 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 
-const SidebarItems = [
+const SidebarItemsGroup1 = [
     {
       title: "Home",
       url: "/home",
@@ -33,4 +33,17 @@ const SidebarItems = [
     },
   ]
 
-export {SidebarItems}
+  const SidebarItemsGroup2 = [
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: Settings,
+    },
+    {
+      title: "Support",
+      url: "/support",
+      icon: Inbox,
+    },
+  ]
+
+export {SidebarItemsGroup1,SidebarItemsGroup2}

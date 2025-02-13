@@ -28,9 +28,9 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
       <body>
         <SidebarProvider>
           <AppSidebar />
-            {children}
-            <ScrollRestoration />
-            <Scripts />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
         </SidebarProvider>
       </body>
     </html>
