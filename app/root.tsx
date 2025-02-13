@@ -7,6 +7,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
+import { SidebarProvider } from "~/components/ui/sidebar"
+import { AppSidebar } from "~/components/app-sidebar"
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -15,7 +17,6 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
-  // const { sidebarOpen } = useLoaderData<{ sidebarOpen: boolean }>();
   return (
     <html lang="en">
       <head>
@@ -25,9 +26,12 @@ export function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
         <Links />
       </head>
       <body>
-          {children}
-          <ScrollRestoration />
-          <Scripts />
+        <SidebarProvider>
+          <AppSidebar />
+            {children}
+            <ScrollRestoration />
+            <Scripts />
+        </SidebarProvider>
       </body>
     </html>
   );
